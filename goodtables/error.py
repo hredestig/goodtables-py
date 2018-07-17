@@ -84,6 +84,10 @@ class Error(object):
     def row(self, value):
         self._row = value
 
+    @property
+    def cell(self):
+        return self._cell
+
     def __eq__(self, other):
         my_row = self.row_number or 0
         my_col = self.column_number or 0
